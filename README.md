@@ -19,8 +19,13 @@ Investigate how the friction force changes with the inclination angle and normal
 ## Installation
 
 ```bash
-uv sync
+uv sync --locked
 ```
+
+Open `analysis.ipynb` in VS Code and select the project's `.venv` under **Select Kernel → Python Environments**.
+
+`.python-version` pins the full Python version because VS Code can report `3.13.x` for a uv environment created with a minor-only pin and save `3.13.-1` in the notebook metadata.
+If your `.venv` was created with the old pin, rename it to `venv.bak`, run `uv sync --locked` again, and reload the VS Code window before selecting the kernel.
 
 ## Project structure
 
